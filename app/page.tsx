@@ -33,7 +33,7 @@ export default function Page() {
     return (
         <ViewProvider values={{ view, setView, setClicked }}>
             <main className="w-full first:h-screen grid grid-cols-1 first:grid-cols-2 overflow-auto first:overflow-hidden bg-primary">
-                <Sidebar rightRef={rightRef} aboutRef={aboutRef} experienceRef={experienceRef} />
+                <Sidebar rightRef={rightRef} />
                 <div
                     ref={rightRef}
                     className="flex flex-col items-center first:items-start pb-20 first:py-24 first:overflow-y-auto"

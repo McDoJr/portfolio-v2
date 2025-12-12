@@ -6,11 +6,9 @@ import { twMerge } from "tailwind-merge";
 
 type NavigationProps = React.HTMLAttributes<HTMLDivElement> & {
     rightRef: RefObject<HTMLDivElement | null>;
-    aboutRef: RefObject<HTMLDivElement | null>;
-    experienceRef: RefObject<HTMLDivElement | null>;
 }
 
-export default function Navigation({ className, rightRef, aboutRef, experienceRef, ...props }: NavigationProps) {
+export default function Navigation({ className, rightRef, ...props }: NavigationProps) {
 
     const { view, setView, setClicked } = useContext(ViewContext);
 

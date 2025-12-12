@@ -8,12 +8,10 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Navigation from "./Navigation";
 
 type SidebarProps = {
-    rightRef: RefObject<HTMLDivElement | null>,
-    aboutRef: RefObject<HTMLDivElement | null>,
-    experienceRef: RefObject<HTMLDivElement | null>,
+    rightRef: RefObject<HTMLDivElement | null>
 }
 
-export default function Sidebar({ rightRef, aboutRef, experienceRef }: SidebarProps) {
+export default function Sidebar({ rightRef }: SidebarProps) {
 
     function onWheel(e: React.WheelEvent<HTMLDivElement>) {
         if (window.innerWidth <= 1400) return;
@@ -39,7 +37,7 @@ export default function Sidebar({ rightRef, aboutRef, experienceRef }: SidebarPr
                     </div>
                     <Avatar className="-translate-y-5" contentClassName="hidden md:block" defaultSize={220} />
                 </div>
-                <Navigation rightRef={rightRef} aboutRef={aboutRef} experienceRef={experienceRef} className="mt-12" />
+                <Navigation rightRef={rightRef} className="mt-12" />
                 <div className="flex items-center mt-18 self-center md:self-start md:mt-auto gap-6 text-neutral-400">
                     <a href="https://github.com/mcdojr" target="_blank" title="Github">
                         <FontAwesomeIcon icon={faGithub} className="cursor-pointer text-xl hover:text-white transition-colors duration-100" />

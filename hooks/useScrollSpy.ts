@@ -21,7 +21,8 @@ export function useScrollSpy(
             ticking = false;
             if (clicked) return;
 
-            const scrollY = container.scrollTop; const maxScroll = container.scrollHeight - container.clientHeight;
+            const scrollY = container.scrollTop;
+            const maxScroll = container.scrollHeight - container.clientHeight;
 
             if (scrollY >= maxScroll - 5) {
                 if (view !== "projects") {
