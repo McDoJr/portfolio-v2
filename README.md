@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+I’m a **junior full-stack web developer** experienced in **Next.js, Svelte, React, Node.js, Express, Supabase, Strapi, PostgreSQL, and MySQL**. I love building **scalable, real-time applications** with a strong focus on performance.
 
-## Getting Started
+I’m also a **Minecraft plugin developer** working with **Spigot, Paper, BungeeCord, and NMS** to create custom gameplay features.
 
-First, run the development server:
+On mobile, I build apps using **React Native Expo**, including camera integration, Google Maps, offline storage, and API-driven features.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I’m passionate about solving problems, learning quickly, and building polished user experiences.  
+**Let’s create something awesome together! 🚀**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧰 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **Frontend**
+<img src="https://skillicons.dev/icons?i=html,css,js,ts,tailwind,svelte,react,next,redux" />
 
-## Learn More
+### **Mobile**
+<img src="https://skillicons.dev/icons?i=react" /> (Expo)
 
-To learn more about Next.js, take a look at the following resources:
+### **Backend & Databases**
+<img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,prisma,redis,mysql,postgres,docker,supabase,java" />
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### **Minecraft Development**
+<img src="https://skillicons.dev/icons?i=java" />  
+**SpigotMC • PaperMC • BungeeCord • NMS**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🚀 What I’m Focused On
+- Building scalable, real-time full-stack applications  
+- Creating smooth and intuitive mobile experiences  
+- Developing optimized Minecraft plugins with custom entities and packets  
+- Continuously learning and exploring new technologies  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Connect With Me
+Always open to collaboration and new opportunities!
