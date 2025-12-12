@@ -1,4 +1,5 @@
 import { scalePath } from "@/utils/svg";
+import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 
 type AvatarProps = React.HTMLAttributes<HTMLDivElement> & {
@@ -30,14 +31,14 @@ export default function Avatar({ defaultSize = 250, contentClassName, ...props }
                 style={{ ["--size" as any]: `${defaultSize}px` }}
             >
                 <div className="wavy-circle">
-                    <img
+                    <Image
                         src="/karl.jpeg"
                         alt="Avatar"
-                        className={twMerge(
-                            "scale-190 translate-y-[90px] translate-x-2.5",
-                            defaultSize === 500 && "translate-y-[200px]",
-                            defaultSize === 300 && "translate-y-[110px]",
-                        )}
+                        width={defaultSize}
+                        height={defaultSize}
+                        loading="eager"
+                        decoding="sync"
+                        className="scale-190 translate-y-[90px] translate-x-2.5"
                     />
                 </div>
 
