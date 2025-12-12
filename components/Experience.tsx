@@ -30,7 +30,7 @@ function ExperienceCard({ title, date, descriptions }: ExperienceCardProps) {
         <div className="py-1 flex flex-col gap-1 cursor-default hover:scale-105 hover:translate-x-4 transition-all">
             <span className="text-sm font-[450] text-neutral-500 mb-1">{date}</span>
             <h5 className="text-[17px] text-neutral-300 font-[450]">{title}</h5>
-            <ul className="mt-2">
+            <ul>
                 {descriptions.map((description, index) => (
                     <li className="mt-2 text-[16px]" key={index}>{description}</li>
                 ))}
