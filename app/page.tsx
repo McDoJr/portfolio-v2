@@ -25,6 +25,7 @@ export default function Page() {
             about: aboutRef,
             tech: techRef,
             experience: experienceRef,
+            projects: projectRef
         },
         clicked,
         { offset: 120 }
