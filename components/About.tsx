@@ -32,7 +32,7 @@ export default function About(props: AboutProps) {
             <a
                 href="/resume.pdf"
                 rel="noopener noreferrer"
-                className="mt-6 self-start flex font-outfit items-center gap-2 text-neutral-400 hover:text-white"
+                className="mt-12 first:mt-24 self-start flex font-outfit items-center gap-2 text-neutral-400 hover:text-white"
                 target="_blank"
             >
                 <span>View Full Résumé</span>

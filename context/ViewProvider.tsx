@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useState } from "react";
+import React, { createContext } from "react";
 
 export const ViewContext = createContext<ViewContextProps>({
     view: "about",
@@ -17,12 +17,11 @@ export type ViewContextProps = {
 export type ViewType = "about" | "tech" | "experience" | "projects";
 
 type ViewProviderProps = {
-    children?: React.ReactNode;
+    children: React.ReactNode;
     values: ViewContextProps;
 }
 
 export default function ViewProvider({ children, values }: ViewProviderProps) {
-
     return (
         <ViewContext.Provider value={values}>
             {children}

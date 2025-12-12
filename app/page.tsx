@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
 import Sidebar from "@/components/Sidebar";
 import TechStack from "@/components/TechStack";
-import ViewProvider, { ViewType } from "@/context/ViewProvider";
+import ViewProvider from "@/context/ViewProvider";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 export default function Page() {
 

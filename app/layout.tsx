@@ -31,9 +31,9 @@ const outfit = localFont({
     }
   ],
   variable: '--font-outfit',
-  display: 'swap', // Improves loading performance
-  preload: true, // Preload the font
-  fallback: ['system-ui', 'arial'] // Fallback fonts
+  display: 'swap',
+  preload: true,
+  fallback: ['system-ui', 'arial']
 });
 
 export const metadata: Metadata = {
@@ -48,6 +48,9 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 
   return (
     <html lang='en' className='overflow-x-hidden!'>
+      <head>
+        <link rel="preload" as="image" href="/karl.jpeg" />
+      </head>
       <body className={`${outfit.variable} antialiased overflow-x-hidden!`}>
         {children}
       </body>

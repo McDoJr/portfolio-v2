@@ -1,7 +1,4 @@
-'use client';
-
 import { scalePath } from "@/utils/svg";
-import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 type AvatarProps = React.HTMLAttributes<HTMLDivElement> & {
@@ -10,25 +7,6 @@ type AvatarProps = React.HTMLAttributes<HTMLDivElement> & {
 }
 
 export default function Avatar({ defaultSize = 250, contentClassName, ...props }: AvatarProps) {
-
-    const [size, setSize] = useState<number>(defaultSize);
-
-    // useEffect(() => {
-    //     function handleResize() {
-    //         const width = window.innerWidth;
-
-    //         let newSize = defaultSize;
-    //         if (width < 1024) newSize = 500;
-    //         if (width <= 480) newSize = 200;
-
-    //         setSize(newSize);
-    //     }
-
-    //     handleResize();
-    //     window.addEventListener("resize", handleResize);
-
-    //     return () => window.removeEventListener("resize", handleResize);
-    // }, [defaultSize]);
 
     return (
         <div {...props}>
@@ -40,7 +18,7 @@ export default function Avatar({ defaultSize = 250, contentClassName, ...props }
                                 attributeName="d"
                                 dur="5s"
                                 repeatCount="indefinite"
-                                values={scalePath(size)}
+                                values={scalePath(defaultSize)}
                             />
                         </path>
                     </mask>
@@ -49,7 +27,7 @@ export default function Avatar({ defaultSize = 250, contentClassName, ...props }
 
             <div
                 className={twMerge("wavy-wrapper select-none", contentClassName)}
-                style={{ ["--size" as any]: `${size}px` }}
+                style={{ ["--size" as any]: `${defaultSize}px` }}
             >
                 <div className="wavy-circle">
                     <img
@@ -57,16 +35,16 @@ export default function Avatar({ defaultSize = 250, contentClassName, ...props }
                         alt="Avatar"
                         className={twMerge(
                             "scale-190 translate-y-[90px] translate-x-2.5",
-                            size === 500 && "translate-y-[200px]",
-                            size === 300 && "translate-y-[110px]",
+                            defaultSize === 500 && "translate-y-[200px]",
+                            defaultSize === 300 && "translate-y-[110px]",
                         )}
                     />
                 </div>
 
                 <svg
-                    width={size}
-                    height={size}
-                    viewBox={`0 0 ${size} ${size}`}
+                    width={defaultSize}
+                    height={defaultSize}
+                    viewBox={`0 0 ${defaultSize} ${defaultSize}`}
                     className="wavy-border white-border"
                 >
                     <path fill="none" stroke="white" strokeWidth="3">
@@ -74,7 +52,7 @@ export default function Avatar({ defaultSize = 250, contentClassName, ...props }
                             attributeName="d"
                             dur="5s"
                             repeatCount="indefinite"
-                            values={scalePath(size)}
+                            values={scalePath(defaultSize)}
                         />
                     </path>
                 </svg>
