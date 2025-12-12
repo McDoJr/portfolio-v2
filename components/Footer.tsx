@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <div className="mt-40">
+        <div className="">
             <span className="text-neutral-500 text-[16px]"
             >Built with
                 <a
