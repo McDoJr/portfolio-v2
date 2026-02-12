@@ -3,61 +3,63 @@ import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 
 type AvatarProps = React.HTMLAttributes<HTMLDivElement> & {
-    defaultSize?: number;
-    contentClassName?: string;
-}
+  defaultSize?: number;
+  contentClassName?: string;
+};
 
-export default function Avatar({ defaultSize = 250, contentClassName, ...props }: AvatarProps) {
+export default function Avatar({
+  defaultSize = 250,
+  contentClassName,
+  ...props
+}: AvatarProps) {
+  return (
+    <div {...props}>
+      <svg width="0" height="0">
+        <defs>
+          <mask id="wavy-circle-mask">
+            <path id="wavy-path" fill="white">
+              <animate
+                attributeName="d"
+                dur="5s"
+                repeatCount="indefinite"
+                values={scalePath(defaultSize)}
+              />
+            </path>
+          </mask>
+        </defs>
+      </svg>
 
-    return (
-        <div {...props}>
-            <svg width="0" height="0">
-                <defs>
-                    <mask id="wavy-circle-mask">
-                        <path id="wavy-path" fill="white">
-                            <animate
-                                attributeName="d"
-                                dur="5s"
-                                repeatCount="indefinite"
-                                values={scalePath(defaultSize)}
-                            />
-                        </path>
-                    </mask>
-                </defs>
-            </svg>
-
-            <div
-                className={twMerge("wavy-wrapper select-none", contentClassName)}
-                style={{ ["--size" as any]: `${defaultSize}px` }}
-            >
-                <div className="wavy-circle">
-                    <Image
-                        src="/karl.jpeg"
-                        alt="Avatar"
-                        width={defaultSize}
-                        height={defaultSize}
-                        loading="eager"
-                        decoding="sync"
-                        className="scale-190 translate-y-[90px] translate-x-2.5"
-                    />
-                </div>
-
-                <svg
-                    width={defaultSize}
-                    height={defaultSize}
-                    viewBox={`0 0 ${defaultSize} ${defaultSize}`}
-                    className="wavy-border white-border"
-                >
-                    <path fill="none" stroke="white" strokeWidth="3">
-                        <animate
-                            attributeName="d"
-                            dur="5s"
-                            repeatCount="indefinite"
-                            values={scalePath(defaultSize)}
-                        />
-                    </path>
-                </svg>
-            </div>
+      <div
+        className={twMerge("wavy-wrapper select-none", contentClassName)}
+        style={{ ["--size" as string]: `${defaultSize}px` }}
+      >
+        <div className="wavy-circle">
+          <Image
+            src="/karl.jpeg"
+            alt="Avatar"
+            width={defaultSize}
+            height={defaultSize}
+            priority
+            className="scale-190 translate-y-[90px] translate-x-2.5"
+          />
         </div>
-    );
+
+        <svg
+          width={defaultSize}
+          height={defaultSize}
+          viewBox={`0 0 ${defaultSize} ${defaultSize}`}
+          className="wavy-border white-border"
+        >
+          <path fill="none" stroke="white" strokeWidth="3">
+            <animate
+              attributeName="d"
+              dur="5s"
+              repeatCount="indefinite"
+              values={scalePath(defaultSize)}
+            />
+          </path>
+        </svg>
+      </div>
+    </div>
+  );
 }

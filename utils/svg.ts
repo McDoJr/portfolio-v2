@@ -6,10 +6,10 @@ const originalD = `
 `;
 
 export function scalePath(newSize: number = 300): string {
-    const originalSize = 300;
-    const scaleFactor = newSize / originalSize;
+  const originalSize = 300;
+  const scaleFactor = newSize / originalSize;
 
-    return originalD.replace(/[-+]?\d*\.?\d+/g, (match) => {
-        return (parseFloat(match) * scaleFactor).toFixed(2);
-    });
+  return originalD.replace(/[-+]?\d*\.?\d+/g, (match) => {
+    return (parseFloat(match) * scaleFactor).toFixed(2);
+  });
 }

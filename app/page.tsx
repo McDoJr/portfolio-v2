@@ -32,6 +32,7 @@ export default function Page() {
 
   return (
     <ViewProvider values={{ view, setView, setClicked }}>
+      <div className="absolute w-full h-screen inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-size-[3rem_3rem] mask-[radial-gradient(ellipse_90%_90%_at_50%_0%,#000_10%,transparent_110%)] opacity-2 pointer-events-none"></div>
       <main className="w-full first:h-screen grid grid-cols-1 first:grid-cols-2 overflow-auto first:overflow-hidden bg-primary">
         <Sidebar rightRef={rightRef} />
         <div
