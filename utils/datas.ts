@@ -33,6 +33,11 @@ export const frontEnd: Tech[] = [
 ];
 
 export const backEnd: Tech[] = [
+  {
+    url: "https://skillicons.dev/icons?i=spring",
+    title: "Spring",
+    href: "https://spring.io/",
+  },
   { url: "https://skillicons.dev/icons?i=nodejs", title: "Node.js" },
   { url: "https://skillicons.dev/icons?i=expressjs", title: "Express" },
   {
