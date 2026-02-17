@@ -135,6 +135,22 @@ export const experiences: ExperienceCardProps[] = [
 
 export const projects: ProjectCardProps[] = [
   {
+    title: "Query Builder",
+    description:
+      "Query-Builder is a full-stack web app built with Next.js, Tailwind CSS, Prisma, and React Query Builder. It allows users to visually create complex database queries with dynamic rules and grouped conditions, without writing raw SQL.",
+    thumbnail: "/query-builder1.png",
+    techs: [
+      "NextJS",
+      "Typescript",
+      "Tailwind",
+      "Shadcn",
+      "Prisma",
+      "PostgreSQL",
+      "Vercel",
+    ],
+    url: "https://query-builder-eta.vercel.app/",
+  },
+  {
     title: "DentWise",
     description:
       "An AI-powered dental assistant platform that streamlines appointment booking while providing intelligent voice-based consultations for dental inquiries, oral health guidance, and DentWise services, enhancing patient engagement, accessibility, and overall dental care experience.",
