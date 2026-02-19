@@ -47,10 +47,25 @@ function ProjectCard({
         "hover:px-4 hover:bg-white/3 transition-all hover:shadow-md cursor-pointer",
       )}
     >
-      <span className="text-[17px] block sm:hidden text-neutral-300 font-[450]">
-        {title}
-      </span>
-      <div className="flex flex-col justify-between">
+      <div className="flex sm:hidden justify-between">
+        <span className="text-[17px] block text-neutral-300 font-[450]">
+          {title}
+        </span>
+        {url && (
+          <a
+            href={url ?? "#"}
+            target={url ? "_blank" : undefined}
+            onClick={(e) => {
+              if (!url) e.preventDefault();
+            }}
+            className="pb-1 text-sm flex self-start items-center gap-1 hover:text-white hover:border-b transition-all duration-100"
+          >
+            <p className="trucate">Demo</p>
+            <ArrowUpRight className="size-4" />
+          </a>
+        )}
+      </div>
+      <div className="flex flex-col justify-between gap-5">
         <div className="w-full sm:w-40 sm:h-[100px] rounded border-2 border-neutral-600">
           <Image
             className="w-full h-full"
@@ -67,7 +82,7 @@ function ProjectCard({
             onClick={(e) => {
               if (!url) e.preventDefault();
             }}
-            className="pb-1 text-sm flex self-start items-center gap-1 hover:text-white hover:border-b transition-all duration-100"
+            className="pb-1 text-sm hidden sm:flex self-start items-center gap-1 hover:text-white hover:border-b transition-all duration-100"
           >
             <p className="trucate">Demo</p>
             <ArrowUpRight className="size-4" />
