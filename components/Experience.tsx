@@ -1,4 +1,4 @@
-import { experiences } from "@/utils/datas";
+import { experiences } from "@/lib/datas";
 
 type ExperienceProps = React.HTMLAttributes<HTMLDivElement> & {
   ref?: React.Ref<HTMLDivElement>;
@@ -7,7 +7,7 @@ type ExperienceProps = React.HTMLAttributes<HTMLDivElement> & {
 export default function Experience(props: ExperienceProps) {
   return (
     <div
-      className="flex flex-col gap-6 pb-16 first:pb-40 text-2xl lg:text-[18px] text-neutral-400 font-light"
+      className="flex flex-col gap-6 pb-16 first:pb-22 text-2xl lg:text-[18px] text-neutral-400 font-light"
       {...props}
     >
       <h1 className="inline text-lg text-neutral-300 font-medium mb-6 first:hidden">

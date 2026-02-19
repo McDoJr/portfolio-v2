@@ -1,4 +1,6 @@
-import { projects } from "@/utils/datas";
+import { projects } from "@/lib/datas";
+import { ArrowUpRight, Link } from "lucide-react";
+import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 
 type ProjectsProps = React.HTMLAttributes<HTMLDivElement> & {
@@ -8,7 +10,7 @@ type ProjectsProps = React.HTMLAttributes<HTMLDivElement> & {
 export default function Projects(props: ProjectsProps) {
   return (
     <div
-      className="flex flex-col gap-6 pb-8 first:pb-40 text-2xl lg:text-[18px] text-neutral-400 font-light"
+      className="flex flex-col gap-6 pb-8 first:pb-22 text-2xl lg:text-[18px] text-neutral-400 font-light"
       {...props}
     >
       <h1 className="inline text-lg text-neutral-300 font-medium mb-6 first:hidden">
@@ -26,6 +28,7 @@ export type ProjectCardProps = {
   description: string;
   thumbnail: string;
   techs: string[];
+  sourceCode?: string;
   url?: string;
 };
 
@@ -34,26 +37,42 @@ function ProjectCard({
   description,
   thumbnail,
   techs,
+  sourceCode,
   url,
 }: ProjectCardProps) {
   return (
-    <a
-      href={url ?? "#"}
-      target={url ? "_blank" : undefined}
-      onClick={(e) => {
-        if (!url) e.preventDefault();
-      }}
+    <div
       className={twMerge(
-        "w-full py-4 rounded flex flex-col sm:flex-row gap-6",
+        "group w-full py-4 rounded flex flex-col sm:flex-row gap-6",
         "hover:px-4 hover:bg-white/3 transition-all hover:shadow-md cursor-pointer",
       )}
     >
       <span className="text-[17px] block sm:hidden text-neutral-300 font-[450]">
         {title}
       </span>
-      <div className="w-full sm:w-40 sm:h-[100px] rounded border-2 border-neutral-600">
-        <img className="w-full h-full" src={thumbnail} alt="thumbnail" />
-        {/* <Image src={thumbnail} alt="thumbnail" fill className="object-cover rounded" /> */}
+      <div className="flex flex-col justify-between">
+        <div className="w-full sm:w-40 sm:h-[100px] rounded border-2 border-neutral-600">
+          <Image
+            className="w-full h-full"
+            src={thumbnail}
+            alt="thumbnail"
+            width={500}
+            height={500}
+          />
+        </div>
+        {url && (
+          <a
+            href={url ?? "#"}
+            target={url ? "_blank" : undefined}
+            onClick={(e) => {
+              if (!url) e.preventDefault();
+            }}
+            className="pb-1 text-sm flex self-start items-center gap-1 hover:text-white hover:border-b transition-all duration-100"
+          >
+            <p className="trucate">Demo</p>
+            <ArrowUpRight className="size-4" />
+          </a>
+        )}
       </div>
 
       <div className="flex-1 flex flex-col gap-3">
@@ -69,7 +88,7 @@ function ProjectCard({
           ))}
         </div>
       </div>
-    </a>
+    </div>
   );
 }
 

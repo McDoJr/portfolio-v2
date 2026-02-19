@@ -147,6 +147,7 @@ export const projects: ProjectCardProps[] = [
     techs: [
       "NextJS",
       "Typescript",
+      "Tanstack-Query",
       "Tailwind",
       "Shadcn",
       "Prisma",
@@ -154,6 +155,7 @@ export const projects: ProjectCardProps[] = [
       "Vercel",
     ],
     url: "https://query-builder-eta.vercel.app/",
+    sourceCode: "https://github.com/McDoJr/query-builder",
   },
   {
     title: "DentWise",
@@ -173,6 +175,7 @@ export const projects: ProjectCardProps[] = [
       "Vercel",
     ],
     url: "https://dentwise-gamma-nine.vercel.app",
+    sourceCode: "https://github.com/McDoJr/dentwise",
   },
   {
     title: "Medico Realty App",

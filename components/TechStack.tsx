@@ -1,4 +1,4 @@
-import { backEnd, frontEnd, others, pluginDevelopment } from "@/utils/datas";
+import { backEnd, frontEnd, others, pluginDevelopment } from "@/lib/datas";
 import { twMerge } from "tailwind-merge";
 
 type TechStackProps = React.HTMLAttributes<HTMLDivElement> & {
@@ -7,7 +7,7 @@ type TechStackProps = React.HTMLAttributes<HTMLDivElement> & {
 
 export default function TechStack(props: TechStackProps) {
   return (
-    <div className="flex flex-col pb-24 first:pb-40 gap-8" {...props}>
+    <div className="flex flex-col pb-16 first:pb-22 gap-8" {...props}>
       <h1 className="inline text-lg text-neutral-300 font-medium mb-6 first:hidden">
         TOOLS & TECH
       </h1>

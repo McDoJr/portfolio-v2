@@ -27,9 +27,9 @@ export default function Sidebar({ rightRef }: SidebarProps) {
   return (
     <div
       onWheel={onWheel}
-      className="h-full flex justify-center py-24 first:justify-end overflow-hidden"
+      className="h-full w-full flex justify-center py-24 first:justify-end overflow-hidden"
     >
-      <div className="max-w-[675px] lg:w-[675px] px-6 lg:px-0 flex flex-col">
+      <div className="max-w-[675px] lg:w-[675px] lg:px-0 flex flex-col items-start">
         <div className="flex flex-col md:flex-row justify-between lg:pr-22">
           <Avatar
             className="-translate-y-5 mx-auto md:mx-0"
@@ -37,11 +37,11 @@ export default function Sidebar({ rightRef }: SidebarProps) {
             defaultSize={220}
           />
           <div className="flex flex-col pt-4 md:pt-0 md:pr-8 lg:pr-0 font-outfit gap-2">
-            <h1 className="text-neutral-300 text-center md:text-start text-4xl font-bold uppercase">
+            <h1 className="text-neutral-300 text-center sm:text-start text-4xl font-bold uppercase">
               Karl Bejerano
             </h1>
             <p className="text-neutral-400 text-center md:text-start text-xl font-medium">
-              Junior Full-Stack + Experienced Minecraft Plugin Developer.
+              Full-Stack Developer
             </p>
             <a
               href="https://google.com/maps/place/Butuan+City"
