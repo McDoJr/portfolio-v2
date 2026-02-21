@@ -14,16 +14,14 @@ export default function About(props: AboutProps) {
         ABOUT
       </h1>
       <p>
-        I’m a full-stack developer building scalable web and mobile apps with
-        clean architecture and real-time features.
+        I’m a full-stack developer experienced in React, Next.js, Node.js,
+        Spring Boot, and Docker, building scalable and production-ready
+        applications.
       </p>
       <p>
-        I also develop custom Minecraft plugins with optimized server-side
-        mechanics.
-      </p>
-      <p>
-        Passionate about problem-solving and continuous learning, I focus on
-        turning ideas into reliable, high-quality products. 🚀
+        I also develop custom Minecraft plugins using Java with Spigot and
+        Paper, and I build and manage complete Minecraft server networks,
+        including deployment and server management with Pterodactyl.
       </p>
 
       <a

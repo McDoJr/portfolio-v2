@@ -1,6 +1,7 @@
 import { projects } from "@/lib/datas";
-import { ArrowUpRight, Link } from "lucide-react";
+import { ArrowUpRight, Eye, Link } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 type ProjectsProps = React.HTMLAttributes<HTMLDivElement> & {
@@ -40,6 +41,10 @@ function ProjectCard({
   sourceCode,
   url,
 }: ProjectCardProps) {
+  const [preview, setPreview] = useState(false);
+
+  const toggle = () => setPreview((prev) => !prev);
+
   return (
     <div
       className={twMerge(
@@ -66,7 +71,10 @@ function ProjectCard({
         )}
       </div>
       <div className="flex flex-col justify-between gap-5">
-        <div className="w-full sm:w-40 sm:h-[100px] rounded border-2 border-neutral-600">
+        <div
+          className="group relative w-full sm:w-40 sm:h-[100px] rounded border-2 border-neutral-600"
+          onClick={toggle}
+        >
           <Image
             className="w-full h-full"
             src={thumbnail}
@@ -74,6 +82,9 @@ function ProjectCard({
             width={500}
             height={500}
           />
+          <div className="hidden group-hover:bg-primary/50 group-hover:flex absolute inset-0 items-center justify-center cursor-pointer transition-all duration-100">
+            <Eye className="text-white" />
+          </div>
         </div>
         {url && (
           <a
@@ -103,6 +114,20 @@ function ProjectCard({
           ))}
         </div>
       </div>
+      {preview && (
+        <div
+          className="fixed inset-0 justify-center items-center bg-primary/50 p-16 z-100"
+          onClick={toggle}
+        >
+          <Image
+            className="w-auto h-full mx-auto border-3 border-neutral-800 shadow-2xl"
+            src={thumbnail}
+            alt="thumbnail"
+            width={1080}
+            height={1080}
+          />
+        </div>
+      )}
     </div>
   );
 }
